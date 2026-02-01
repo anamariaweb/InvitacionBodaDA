@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  background: var(--bg-light);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--olive);
+  position: relative;
+  padding-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+}
+
+.leaf-decoration {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.submit-button {
+  background: var(--olive);
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.submit-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(56, 87, 54, 0.3);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: var(--bg-light);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--olive);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}

@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ref, onUnmounted, computed } from 'vue'
 
 export function useCarousel(totalSlides: number, autoAdvanceMs = 5000) {
   const currentSlide = ref(0)
@@ -18,6 +18,12 @@ export function useCarousel(totalSlides: number, autoAdvanceMs = 5000) {
     currentSlide.value = (currentSlide.value - 1 + totalSlides) % totalSlides
   }
 
+  function resetAndStart() {
+    stopAutoAdvance()
+    currentSlide.value = 0
+    startAutoAdvance()
+  }
+
   function startAutoAdvance() {
     if (intervalId) return
     intervalId = window.setInterval(nextSlide, autoAdvanceMs)
@@ -29,10 +35,6 @@ export function useCarousel(totalSlides: number, autoAdvanceMs = 5000) {
       intervalId = null
     }
   }
-
-  onMounted(() => {
-    startAutoAdvance()
-  })
 
   onUnmounted(() => {
     stopAutoAdvance()
@@ -46,5 +48,6 @@ export function useCarousel(totalSlides: number, autoAdvanceMs = 5000) {
     prevSlide,
     startAutoAdvance,
     stopAutoAdvance,
+    resetAndStart,
   }
 }

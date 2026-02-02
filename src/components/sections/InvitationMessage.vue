@@ -23,7 +23,7 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 
 <style scoped>
 .invitation {
-  background: var(--white);
+  background: var(--secondary) url('/images/backgrounds/background2.png') center center / cover no-repeat;
   text-align: center;
   position: relative;
 }
@@ -55,6 +55,10 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
   color: var(--olive);
   line-height: 1.3;
   font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .separator {
@@ -67,10 +71,15 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 .message {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   line-height: 2;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 0 30% 2rem;
   color: var(--text-light);
   font-family: 'Lora', serif;
+}
+
+@media (max-width: 768px) {
+  .message {
+    margin: 0 10% 2rem;
+  }
 }
 
 .leaf-decoration {

@@ -3,20 +3,24 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 </script>
 
 <template>
-  <SectionWrapper id="dresscode" class="dresscode">
+  <SectionWrapper id="dresscode" class="dresscode" :noFade="true">
     <div class="container">
-      <h2 class="section-title">Dress Code</h2>
+      <h2 class="section-title">Código de Vestimenta</h2>
       <div class="dresscode-content">
         <div class="dresscode-grid">
           <div class="dresscode-item">
-            <div class="icon">👔</div>
+            <div class="icon">
+              <img src="/images/dresscode/2hombre.png" alt="Hombre en traje" class="silhouette">
+            </div>
             <h3>Hombres</h3>
-            <p>Traje completo con corbata o corbatín</p>
+            <p>Traje con corbata o corbatín</p>
           </div>
           <div class="dresscode-item">
-            <div class="icon">👗</div>
+            <div class="icon">
+              <img src="/images/dresscode/1mujer.png" alt="Mujer en vestido largo" class="silhouette">
+            </div>
             <h3>Mujeres</h3>
-            <p>Vestido largo elegante</p>
+            <p>Vestido largo</p>
           </div>
         </div>
 
@@ -37,8 +41,22 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 
 <style scoped>
 .dresscode {
-  background: var(--white);
+  background: linear-gradient(135deg, var(--olive) 0%, var(--primary-dark) 100%);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dresscode .container {
+  position: relative;
+}
+
+.dresscode :deep(.section-title) {
+  color: white;
+}
+
+.dresscode :deep(.section-title::after) {
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
 }
 
 .dresscode-content {
@@ -54,21 +72,29 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 }
 
 .dresscode-item {
-  background: var(--bg-light);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 2.5rem;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-  border: 3px solid var(--beige);
+  border-radius: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(56, 87, 54, 0.1);
 }
 
 .dresscode-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(56, 87, 54, 0.15);
+  box-shadow: 0 15px 40px rgba(56, 87, 54, 0.2);
 }
 
 .dresscode-item .icon {
-  font-size: 3.5rem;
   margin-bottom: 1rem;
+}
+
+.dresscode-item .silhouette {
+  width: 140px;
+  height: 180px;
+  object-fit: contain;
 }
 
 .dresscode-item h3 {
@@ -85,11 +111,18 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 }
 
 .color-restrictions {
-  background: rgba(135, 149, 107, 0.1);
+  background: rgba(245, 241, 232, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 15px;
-  border: 2px dashed var(--primary);
+  border: 2px dashed var(--olive);
   margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.color-restrictions p {
+  color: var(--text-dark);
 }
 
 .color-restrictions strong {

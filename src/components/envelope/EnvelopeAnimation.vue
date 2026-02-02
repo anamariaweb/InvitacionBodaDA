@@ -80,6 +80,7 @@ function handleClick() {
   justify-content: center;
   z-index: 10000;
   transition: opacity 0.8s ease, transform 0.8s ease;
+  overflow: hidden;
 }
 
 .envelope-wrapper.hidden {

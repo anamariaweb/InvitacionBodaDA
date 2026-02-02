@@ -23,16 +23,17 @@ const isCodeValid = ref(false)
 
 // Form state
 const formData = ref({
-  nombre: '',
-  acompanantes: 0,
-  nombres_acompanantes: '',
-  restricciones: '',
+  nombres: '',
   transporte: '',
   celular: '',
   email: '',
 })
 
-const showCompanionNames = computed(() => formData.value.acompanantes > 0)
+// Check if deadline has passed (August 31, 2026)
+const deadlinePassed = computed(() => {
+  const deadline = new Date('2026-08-31T23:59:59')
+  return new Date() > deadline
+})
 
 function verifyCode() {
   const upperCode = code.value.toUpperCase().trim()
@@ -62,10 +63,7 @@ function resetAndClose() {
   codeError.value = ''
   isCodeValid.value = false
   formData.value = {
-    nombre: '',
-    acompanantes: 0,
-    nombres_acompanantes: '',
-    restricciones: '',
+    nombres: '',
     transporte: '',
     celular: '',
     email: '',
@@ -105,39 +103,27 @@ watch(isOpen, (open) => {
       <button class="submit-button" @click="verifyCode">Verificar</button>
     </div>
 
+    <!-- Deadline passed message -->
+    <div v-else-if="deadlinePassed" class="deadline-passed">
+      <h2>Confirmación de Asistencia</h2>
+      <div class="deadline-message">
+        <p>El plazo para confirmar asistencia ha finalizado.</p>
+        <p>Por favor comunícate directamente con los novios.</p>
+      </div>
+    </div>
+
     <!-- RSVP Form -->
     <form v-else class="rsvp-form" @submit.prevent="handleSubmit">
       <h2>Confirmación de Asistencia</h2>
 
       <div class="form-group">
-        <label>Nombre Completo *</label>
-        <input v-model="formData.nombre" type="text" required>
-      </div>
-
-      <div class="form-group">
-        <label>¿Cuántos acompañantes traerás?</label>
+        <label>Tu nombre y el de tu acompañante *</label>
         <input
-          v-model.number="formData.acompanantes"
-          type="number"
-          min="0"
-          max="10"
+          v-model="formData.nombres"
+          type="text"
+          required
+          placeholder="Ej: Ana Trujillo, Deimar Herrera"
         >
-      </div>
-
-      <div v-if="showCompanionNames" class="form-group">
-        <label>Nombres de acompañantes</label>
-        <textarea
-          v-model="formData.nombres_acompanantes"
-          placeholder="Escribe los nombres de tus acompañantes"
-        ></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Restricciones alimentarias o alergias</label>
-        <textarea
-          v-model="formData.restricciones"
-          placeholder="Si tienes alguna restricción alimentaria, cuéntanos aquí"
-        ></textarea>
       </div>
 
       <div class="form-group">
@@ -226,5 +212,28 @@ h2 {
   color: var(--text-light);
   font-family: 'Lora', serif;
   font-style: italic;
+}
+
+.deadline-passed {
+  text-align: center;
+}
+
+.deadline-message {
+  background: rgba(245, 241, 232, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px dashed var(--olive);
+}
+
+.deadline-message p {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  font-family: 'Lora', serif;
+}
+
+.deadline-message p:first-child {
+  font-weight: 600;
+  color: var(--olive);
 }
 </style>

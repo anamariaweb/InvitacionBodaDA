@@ -74,11 +74,12 @@ watch(() => props.modelValue, (open) => {
 .modal-content {
   background: white;
   padding: 3rem;
-  border-radius: 25px;
+  border-radius: 30px;
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   border: 5px solid var(--beige);
 }

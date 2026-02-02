@@ -22,14 +22,18 @@ export function useCountdown() {
       return
     }
 
+    isFinished.value = false
     days.value = Math.floor(distance / (1000 * 60 * 60 * 24))
     hours.value = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     minutes.value = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
   }
 
+  // Calcular inmediatamente
+  updateCountdown()
+
   onMounted(() => {
     updateCountdown()
-    intervalId = window.setInterval(updateCountdown, 60000)
+    intervalId = window.setInterval(updateCountdown, 1000)
   })
 
   onUnmounted(() => {

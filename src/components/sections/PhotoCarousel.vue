@@ -1,17 +1,45 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import SectionWrapper from '../ui/SectionWrapper.vue'
 import { useCarousel } from '../../composables/useCarousel'
 import { CAROUSEL_IMAGES } from '../../config/constants'
 
 const images = CAROUSEL_IMAGES
-const { currentSlide, transform, goToSlide, nextSlide, prevSlide } = useCarousel(images.length)
+const { currentSlide, transform, goToSlide, nextSlide, prevSlide, resetAndStart, stopAutoAdvance } = useCarousel(images.length)
 
 const indicators = computed(() => images.map((_, index) => index))
+
+const carouselRef = ref<HTMLElement | null>(null)
+let observer: IntersectionObserver | null = null
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          resetAndStart()
+        } else {
+          stopAutoAdvance()
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
+
+  if (carouselRef.value) {
+    observer.observe(carouselRef.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
+  }
+})
 </script>
 
 <template>
-  <SectionWrapper id="photos" class="carousel">
+  <SectionWrapper id="photos" ref="carouselRef" class="carousel">
     <div class="container">
       <h2 class="section-title">Nuestra Historia</h2>
       <div class="carousel-container">
@@ -42,7 +70,12 @@ const indicators = computed(() => images.map((_, index) => index))
 
 <style scoped>
 .carousel {
-  background: var(--secondary);
+  background: var(--secondary) url('/images/backgrounds/background2.png') center center / cover no-repeat;
+}
+
+.carousel :deep(.section-title) {
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
 }
 
 .carousel-container {

@@ -7,7 +7,7 @@ const showModal = ref(false)
 </script>
 
 <template>
-  <SectionWrapper class="rsvp-section">
+  <SectionWrapper class="rsvp-section" :noFade="true">
     <div class="container">
       <button class="rsvp-button" @click="showModal = true">
         Confirmar Asistencia
@@ -28,13 +28,17 @@ const showModal = ref(false)
 }
 
 .rsvp-section::before {
-  content: '🌿';
+  content: '🌿' !important;
+  display: block !important;
   position: absolute;
   font-size: 15rem;
   opacity: 0.1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-15deg);
+  background: none !important;
+  height: auto !important;
+  width: auto !important;
 }
 
 .rsvp-button {

@@ -6,10 +6,10 @@ const { days, hours, minutes, isFinished } = useCountdown()
 </script>
 
 <template>
-  <SectionWrapper id="countdown" class="countdown">
+  <SectionWrapper id="countdown" class="countdown" :noFade="true">
     <div class="container">
       <h2 class="section-title">Cuenta Regresiva</h2>
-      <p class="countdown-text">⏰ Tiempo restante para que Ana diga 'sí' (esperamos 😅)</p>
+      <p class="countdown-text">⏰ Tiempo restante para que Ana diga 'sí' (esperemos 😅)</p>
       <div v-if="isFinished" class="countdown-finished">
         <p>¡Es hoy! 🎉</p>
       </div>
@@ -40,25 +40,8 @@ const { days, hours, minutes, isFinished } = useCountdown()
   overflow: hidden;
 }
 
-.countdown::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .countdown .container {
   position: relative;
-  z-index: 1;
 }
 
 .countdown :deep(.section-title) {
@@ -84,12 +67,50 @@ const { days, hours, minutes, isFinished } = useCountdown()
 }
 
 .time-unit {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.1);
   padding: 2.5rem;
-  border-radius: 20px;
+  border-radius: 24px;
   min-width: 130px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.time-unit::before {
+  content: '🌿';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.time-unit::after {
+  content: '🌿';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  transform: rotate(180deg);
+}
+
+.time-unit:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.time-unit:hover::before,
+.time-unit:hover::after {
+  opacity: 0.9;
 }
 
 .time-value {

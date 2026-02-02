@@ -10,8 +10,27 @@ const heroRef = ref<HTMLElement | null>(null)
 const videoEnded = ref(false)
 const showPlayButton = ref(false)
 const isPlaying = ref(false)
+const isReturningVisitor = ref(false)
 let observer: IntersectionObserver | null = null
 const pageLoadTime = Date.now()
+
+const STORAGE_KEY = 'boda_video_watched'
+
+function checkIfReturningVisitor(): boolean {
+  try {
+    return localStorage.getItem(STORAGE_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
+function markVideoAsWatched() {
+  try {
+    localStorage.setItem(STORAGE_KEY, 'true')
+  } catch {
+    // localStorage not available
+  }
+}
 
 function lockScroll() {
   document.body.style.overflow = 'hidden'
@@ -24,6 +43,7 @@ function unlockScroll() {
 function handleVideoEnd() {
   videoEnded.value = true
   unlockScroll()
+  markVideoAsWatched()
   emit('videoEnded')
   // Auto-scroll a la siguiente sección
   setTimeout(() => {
@@ -32,13 +52,13 @@ function handleVideoEnd() {
 }
 
 function handleWheel(e: WheelEvent) {
-  if (!videoEnded.value) {
+  if (!videoEnded.value && !isReturningVisitor.value) {
     e.preventDefault()
   }
 }
 
 function handleTouch(e: TouchEvent) {
-  if (!videoEnded.value) {
+  if (!videoEnded.value && !isReturningVisitor.value) {
     e.preventDefault()
   }
 }
@@ -56,6 +76,16 @@ function playVideo() {
 }
 
 onMounted(() => {
+  // Verificar si es visitante que regresa
+  isReturningVisitor.value = checkIfReturningVisitor()
+
+  // Si ya vio el video antes, no bloquear
+  if (isReturningVisitor.value) {
+    videoEnded.value = true
+    showPlayButton.value = true
+    emit('videoEnded')
+  }
+
   // Listener para cuando el video termine y mostrar primer frame
   if (videoRef.value) {
     videoRef.value.addEventListener('ended', handleVideoEnd)
@@ -73,6 +103,11 @@ onMounted(() => {
       entries.forEach((entry) => {
         if (videoRef.value) {
           if (entry.isIntersecting) {
+            // Si es visitante que regresa, no bloquear
+            if (isReturningVisitor.value) {
+              showPlayButton.value = true
+              return
+            }
             // Si ha pasado más de 1 minuto, no bloquear
             const elapsedTime = Date.now() - pageLoadTime
             if (elapsedTime > 60000) {

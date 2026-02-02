@@ -62,4 +62,14 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
   color: var(--text-light);
   font-family: 'Lora', serif;
 }
+
+.gifts-content > p:first-child {
+  margin: 0 35% 0 35%;
+}
+
+@media (max-width: 768px) {
+  .gifts-content > p:first-child {
+    margin: 0 10% 0 10%;
+  }
+}
 </style>

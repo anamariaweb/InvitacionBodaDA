@@ -31,17 +31,16 @@ function handleVideoEnd() {
   }, 500)
 }
 
-// TEMPORALMENTE DESHABILITADO PARA EDICIÓN
 function handleWheel(e: WheelEvent) {
-  // if (!videoEnded.value) {
-  //   e.preventDefault()
-  // }
+  if (!videoEnded.value) {
+    e.preventDefault()
+  }
 }
 
 function handleTouch(e: TouchEvent) {
-  // if (!videoEnded.value) {
-  //   e.preventDefault()
-  // }
+  if (!videoEnded.value) {
+    e.preventDefault()
+  }
 }
 
 function playVideo() {
@@ -82,7 +81,7 @@ onMounted(() => {
               return
             }
             if (!videoEnded.value) {
-              // lockScroll() // TEMPORALMENTE DESHABILITADO PARA EDICIÓN
+              lockScroll()
               showPlayButton.value = true
             }
           } else {

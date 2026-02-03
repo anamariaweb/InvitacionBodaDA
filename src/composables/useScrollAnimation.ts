@@ -21,9 +21,12 @@ export function useScrollAnimation(options: IntersectionObserverInit = {}) {
       })
     }, defaultOptions)
 
-    if (elementRef.value) {
-      observer.observe(elementRef.value)
-    }
+    setTimeout(() => {
+      const el = elementRef.value?.$el || elementRef.value
+      if (el && observer) {
+        observer.observe(el)
+      }
+    }, 100)
   })
 
   onUnmounted(() => {

@@ -27,9 +27,11 @@ onMounted(() => {
     }
   )
 
-  if (sectionRef.value) {
-    observer.observe(sectionRef.value)
-  }
+  setTimeout(() => {
+    if (sectionRef.value && observer) {
+      observer.observe(sectionRef.value)
+    }
+  }, 100)
 })
 
 onUnmounted(() => {

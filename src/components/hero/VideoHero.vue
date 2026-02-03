@@ -130,11 +130,14 @@ onMounted(() => {
     { threshold: 0.3 }
   )
 
-  if (heroRef.value) {
-    observer.observe(heroRef.value)
-    heroRef.value.addEventListener('wheel', handleWheel, { passive: false })
-    heroRef.value.addEventListener('touchmove', handleTouch, { passive: false })
-  }
+  // Esperar al siguiente tick para asegurar que el DOM está listo
+  setTimeout(() => {
+    if (heroRef.value && observer) {
+      observer.observe(heroRef.value)
+      heroRef.value.addEventListener('wheel', handleWheel, { passive: false })
+      heroRef.value.addEventListener('touchmove', handleTouch, { passive: false })
+    }
+  }, 100)
 })
 
 onUnmounted(() => {

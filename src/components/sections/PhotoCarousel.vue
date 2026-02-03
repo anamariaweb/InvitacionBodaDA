@@ -27,9 +27,13 @@ onMounted(() => {
     { threshold: 0.3 }
   )
 
-  if (carouselRef.value) {
-    observer.observe(carouselRef.value)
-  }
+  // Esperar al siguiente tick y obtener el elemento DOM del componente
+  setTimeout(() => {
+    const el = carouselRef.value?.$el || carouselRef.value
+    if (el && observer) {
+      observer.observe(el)
+    }
+  }, 100)
 })
 
 onUnmounted(() => {

@@ -1,0 +1,18 @@
+/* Fondos optimizados con soporte WebP */
+
+/* Fondo principal (background2) - usado en múltiples secciones */
+.bg-pattern {
+  background: var(--secondary) url('/images/backgrounds/background2.png') center center / cover no-repeat;
+}
+
+/* WebP para navegadores modernos */
+@supports (background-image: url('/images/backgrounds/background2.webp')) {
+  .bg-pattern-webp {
+    background-image: url('/images/backgrounds/background2.webp');
+  }
+}
+
+/* CSS custom property para detectar soporte WebP via JS */
+:root {
+  --bg-pattern: url('/images/backgrounds/background2.png');
+}

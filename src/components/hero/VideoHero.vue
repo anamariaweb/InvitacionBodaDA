@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import OptimizedImage from '../ui/OptimizedImage.vue'
 
 const emit = defineEmits<{
   videoEnded: []
@@ -42,6 +43,7 @@ function unlockScroll() {
 
 function handleVideoEnd() {
   videoEnded.value = true
+  isPlaying.value = false
   unlockScroll()
   markVideoAsWatched()
   emit('videoEnded')
@@ -153,19 +155,19 @@ onUnmounted(() => {
 
 <template>
   <div ref="heroRef" class="video-hero">
-    <img
+    <OptimizedImage
       v-if="!isPlaying"
       class="video-poster"
       src="/images/video/1.jpeg"
       alt="Video preview"
+      loading="eager"
     />
     <video ref="videoRef" playsinline preload="auto" :class="{ visible: isPlaying }">
-      <source src="/boda-video.MOV" type="video/quicktime">
-      <source src="/boda-video.MOV" type="video/mp4">
+      <source src="/boda-video.mp4" type="video/mp4">
     </video>
 
     <button
-      v-if="showPlayButton && !videoEnded"
+      v-if="!isPlaying"
       class="play-button"
       @click="playVideo"
     >
@@ -191,17 +193,16 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  object-fit: cover;
-  object-position: center center;
   z-index: 1;
+  pointer-events: none;
 }
 
-@supports (height: 100dvh) {
-  .video-poster {
-    height: 100dvh;
-  }
+.video-poster :deep(img) {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .video-hero video {
@@ -222,20 +223,18 @@ onUnmounted(() => {
     min-height: -webkit-fill-available;
   }
 
-  .video-poster {
+  .video-poster :deep(img) {
+    height: 100vh;
+    height: 100dvh;
     object-fit: cover;
-    height: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
   }
 
   .video-hero video {
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     object-fit: cover;
-    object-position: calc(50% - 10px) center;
+    object-position: center center;
   }
 }
 
@@ -244,18 +243,25 @@ onUnmounted(() => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: transparent;
-  border: none;
-  font-size: 5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
   color: white;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 10;
-  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 8px;
 }
 
-.play-button:hover {
+.play-button:hover,
+.play-button:active {
   transform: translate(-50%, -50%) scale(1.1);
-  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
 }
 </style>

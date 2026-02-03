@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionWrapper from '../ui/SectionWrapper.vue'
+import OptimizedImage from '../ui/OptimizedImage.vue'
 </script>
 
 <template>
@@ -10,14 +11,14 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
         <div class="dresscode-grid">
           <div class="dresscode-item">
             <div class="icon">
-              <img src="/images/dresscode/2hombre.png" alt="Hombre en traje" class="silhouette">
+              <OptimizedImage src="/images/dresscode/2hombre.png" alt="Hombre en traje" class="silhouette" />
             </div>
             <h3>Hombres</h3>
             <p>Traje con corbata o corbatín</p>
           </div>
           <div class="dresscode-item">
             <div class="icon">
-              <img src="/images/dresscode/1mujer.png" alt="Mujer en vestido largo" class="silhouette">
+              <OptimizedImage src="/images/dresscode/1mujer.png" alt="Mujer en vestido largo" class="silhouette" />
             </div>
             <h3>Mujeres</h3>
             <p>Vestido largo</p>
@@ -89,9 +90,17 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 
 .dresscode-item .icon {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.dresscode-item .silhouette {
+.dresscode-item .icon :deep(picture) {
+  display: flex;
+  justify-content: center;
+}
+
+.dresscode-item .icon :deep(img) {
   width: 140px;
   height: 180px;
   object-fit: contain;

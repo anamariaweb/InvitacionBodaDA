@@ -50,7 +50,15 @@ function openSpotify() {
 
 <style scoped>
 .music {
-  background: var(--secondary) url('/images/backgrounds/background2.png') center center / cover no-repeat;
+  background-color: var(--secondary);
+  background-image: url('/images/backgrounds/background2.png');
+  background-image: image-set(
+    url('/images/backgrounds/background2.webp') type('image/webp'),
+    url('/images/backgrounds/background2.png') type('image/png')
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 

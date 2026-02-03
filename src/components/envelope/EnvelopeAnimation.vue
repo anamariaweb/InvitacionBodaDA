@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import OptimizedImage from '../ui/OptimizedImage.vue'
 
 const emit = defineEmits<{
   opened: []
@@ -60,7 +61,7 @@ function handleClick() {
           <path d="M0,0 L0,12 L12,8 L24,14 L36,6 L48,12 L60,4 L72,10 L84,5 L96,10 L100,6 L100,0 Z" fill="rgba(255,255,255,0.25)"/>
         </g>
       </svg>
-      <img class="wax-seal" :class="{ hidden: letterOut }" src="/images/envelope/sello.png" alt="Sello" />
+      <OptimizedImage class="wax-seal" :class="{ hidden: letterOut }" src="/images/envelope/sello.png" alt="Sello" loading="eager" />
     </div>
     <p class="envelope-instruction">Haz clic en el sobre para abrir</p>
   </div>
@@ -73,7 +74,15 @@ function handleClick() {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url('/images/backgrounds/background2.png') center center / cover no-repeat;
+  background-color: var(--secondary);
+  background-image: url('/images/backgrounds/background2.png');
+  background-image: image-set(
+    url('/images/backgrounds/background2.webp') type('image/webp'),
+    url('/images/backgrounds/background2.png') type('image/png')
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,11 +242,16 @@ function handleClick() {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 5;
+  transition: opacity 0.5s ease;
   width: 90px;
   height: auto;
-  z-index: 5;
+}
+
+.wax-seal :deep(img) {
+  width: 90px;
+  height: auto;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
-  transition: opacity 0.5s ease;
 }
 
 .wax-seal.hidden {
@@ -315,8 +329,12 @@ function handleClick() {
   }
 
   .wax-seal {
-    width: 70px;
     bottom: 40px;
+    width: 70px;
+  }
+
+  .wax-seal :deep(img) {
+    width: 70px;
   }
 }
 </style>

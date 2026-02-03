@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted } from 'vue'
 import SectionWrapper from '../ui/SectionWrapper.vue'
+import OptimizedImage from '../ui/OptimizedImage.vue'
 import { useCarousel } from '../../composables/useCarousel'
 import { CAROUSEL_IMAGES } from '../../config/constants'
 
@@ -49,7 +50,7 @@ onUnmounted(() => {
             :key="index"
             class="carousel-slide"
           >
-            <img :src="img" :alt="`Foto ${index + 1}`">
+            <OptimizedImage :src="img" :alt="`Foto ${index + 1}`" :loading="index === 0 ? 'eager' : 'lazy'" />
           </div>
         </div>
         <button class="carousel-button prev" @click="prevSlide">‹</button>
@@ -70,7 +71,15 @@ onUnmounted(() => {
 
 <style scoped>
 .carousel {
-  background: var(--secondary) url('/images/backgrounds/background2.png') center center / cover no-repeat;
+  background-color: var(--secondary);
+  background-image: url('/images/backgrounds/background2.png');
+  background-image: image-set(
+    url('/images/backgrounds/background2.webp') type('image/webp'),
+    url('/images/backgrounds/background2.png') type('image/png')
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .carousel :deep(.section-title) {
@@ -98,9 +107,15 @@ onUnmounted(() => {
   position: relative;
 }
 
-.carousel-slide img {
+.carousel-slide :deep(picture) {
+  display: block;
   width: 100%;
   height: 600px;
+}
+
+.carousel-slide :deep(img) {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -165,7 +180,7 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
-  .carousel-slide img {
+  .carousel-slide :deep(picture) {
     height: 400px;
   }
 }

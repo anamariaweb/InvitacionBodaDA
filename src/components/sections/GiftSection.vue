@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionWrapper from '../ui/SectionWrapper.vue'
+import OptimizedImage from '../ui/OptimizedImage.vue'
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
           para consentir a los novios... busca el buzón en la fiesta
         </p>
         <div class="mailbox">
-          <img src="/images/dresscode/sobres.png" alt="Lluvia de sobres">
+          <OptimizedImage src="/images/dresscode/sobres.png" alt="Lluvia de sobres" />
         </div>
         <p class="lluvia-title">💵 <strong>Lluvia de sobres</strong></p>
       </div>
@@ -22,7 +23,15 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
 
 <style scoped>
 .gifts {
-  background: var(--secondary) url('/images/backgrounds/background2.png') center center / cover no-repeat;
+  background-color: var(--secondary);
+  background-image: url('/images/backgrounds/background2.png');
+  background-image: image-set(
+    url('/images/backgrounds/background2.webp') type('image/webp'),
+    url('/images/backgrounds/background2.png') type('image/png')
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
@@ -49,7 +58,7 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
   50% { transform: translateY(-20px); }
 }
 
-.mailbox img {
+.mailbox :deep(img) {
   width: 100%;
   height: 100%;
   object-fit: contain;

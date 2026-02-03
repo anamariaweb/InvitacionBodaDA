@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import BaseModal from '../ui/BaseModal.vue'
-import { VALID_CODES, TRANSPORT_OPTIONS } from '../../config/constants'
+import { GUEST_CODES, TRANSPORT_OPTIONS } from '../../config/constants'
 
 const props = defineProps<{
   modelValue: boolean
@@ -20,6 +20,8 @@ const isOpen = computed({
 const code = ref('')
 const codeError = ref('')
 const isCodeValid = ref(false)
+const guestName = ref('')
+const isCodeConfirmed = ref(false)
 
 // Form state
 const formData = ref({
@@ -37,7 +39,10 @@ const deadlinePassed = computed(() => {
 
 function verifyCode() {
   const upperCode = code.value.toUpperCase().trim()
-  if (VALID_CODES.includes(upperCode)) {
+  const guest = GUEST_CODES[upperCode]
+
+  if (guest) {
+    guestName.value = guest
     isCodeValid.value = true
     codeError.value = ''
   } else {
@@ -45,23 +50,64 @@ function verifyCode() {
   }
 }
 
+function confirmGuest() {
+  isCodeConfirmed.value = true
+}
+
+function rejectGuest() {
+  isCodeValid.value = false
+  code.value = ''
+  guestName.value = ''
+  codeError.value = 'Por favor ingresa el código correcto de tu invitación.'
+}
+
+const isSubmitting = ref(false)
+const submitError = ref('')
+const submitSuccess = ref(false)
+
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw9Ds4Xr_kjD-QBOUoQdvKePPY0ZNJQZiIycY3wTmYS7vE5Eyxmi4Ungwcvi2HSttL2/exec'
+
 async function handleSubmit() {
+  isSubmitting.value = true
+  submitError.value = ''
+
   const data = {
-    ...formData.value,
     codigo: code.value.toUpperCase(),
+    nombres: guestName.value,
+    transporte: formData.value.transporte,
+    celular: formData.value.celular,
+    email: formData.value.email,
   }
 
-  // TODO: Add Google Sheets API integration here
-  console.log('Form data:', data)
+  try {
+    // Construir URL con parámetros
+    const params = new URLSearchParams(data)
+    const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`
 
-  alert('¡Gracias por confirmar! Nos vemos en la boda 🎉')
-  resetAndClose()
+    // Usar imagen para enviar (método más confiable con CORS)
+    const img = new Image()
+    img.src = url
+
+    // Esperar un momento para que se envíe
+    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    submitSuccess.value = true
+  } catch (error) {
+    submitError.value = 'Error al enviar. Por favor intenta de nuevo.'
+    console.error('Error:', error)
+  } finally {
+    isSubmitting.value = false
+  }
 }
 
 function resetAndClose() {
   code.value = ''
   codeError.value = ''
   isCodeValid.value = false
+  isCodeConfirmed.value = false
+  guestName.value = ''
+  submitSuccess.value = false
+  submitError.value = ''
   formData.value = {
     nombres: '',
     transporte: '',
@@ -77,6 +123,10 @@ watch(isOpen, (open) => {
     code.value = ''
     codeError.value = ''
     isCodeValid.value = false
+    isCodeConfirmed.value = false
+    guestName.value = ''
+    submitSuccess.value = false
+    submitError.value = ''
   }
 })
 </script>
@@ -103,6 +153,26 @@ watch(isOpen, (open) => {
       <button class="submit-button" @click="verifyCode">Verificar</button>
     </div>
 
+    <!-- Guest confirmation -->
+    <div v-else-if="isCodeValid && !isCodeConfirmed" class="guest-confirmation">
+      <h2>Confirma tu identidad</h2>
+      <p class="guest-label">Esta invitación es para:</p>
+      <p class="guest-name">{{ guestName }}</p>
+      <p class="guest-question">¿Eres tú?</p>
+      <div class="confirmation-buttons">
+        <button class="confirm-button yes" @click="confirmGuest">Sí, soy yo</button>
+        <button class="confirm-button no" @click="rejectGuest">No, me equivoqué</button>
+      </div>
+    </div>
+
+    <!-- Success message -->
+    <div v-else-if="submitSuccess" class="success-message">
+      <div class="success-icon">🎉</div>
+      <h2>¡Gracias por confirmar!</h2>
+      <p>Nos vemos en la boda</p>
+      <button class="submit-button" @click="resetAndClose">Cerrar</button>
+    </div>
+
     <!-- Deadline passed message -->
     <div v-else-if="deadlinePassed" class="deadline-passed">
       <h2>Confirmación de Asistencia</h2>
@@ -113,17 +183,12 @@ watch(isOpen, (open) => {
     </div>
 
     <!-- RSVP Form -->
-    <form v-else class="rsvp-form" @submit.prevent="handleSubmit">
+    <form v-else-if="isCodeConfirmed" class="rsvp-form" @submit.prevent="handleSubmit">
       <h2>Confirmación de Asistencia</h2>
 
       <div class="form-group">
-        <label>Tu nombre y el de tu acompañante *</label>
-        <input
-          v-model="formData.nombres"
-          type="text"
-          required
-          placeholder="Ej: Ana Trujillo, Deimar Herrera"
-        >
+        <label>Invitación para:</label>
+        <div class="guest-name-display">{{ guestName }}</div>
       </div>
 
       <div class="form-group">
@@ -159,7 +224,10 @@ watch(isOpen, (open) => {
         >
       </div>
 
-      <button type="submit" class="submit-button">Confirmar Asistencia</button>
+      <div v-if="submitError" class="submit-error">{{ submitError }}</div>
+      <button type="submit" class="submit-button" :disabled="isSubmitting">
+        {{ isSubmitting ? 'Enviando...' : 'Confirmar Asistencia' }}
+      </button>
       <p class="deadline">
         Fecha límite: Agosto 2026
       </p>
@@ -235,5 +303,116 @@ h2 {
 .deadline-message p:first-child {
   font-weight: 600;
   color: var(--olive);
+}
+
+.submit-error {
+  color: #c62828;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success-message {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.success-message h2 {
+  color: var(--olive);
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-family: 'Lora', serif;
+  margin-bottom: 2rem;
+}
+
+.guest-confirmation {
+  text-align: center;
+}
+
+.guest-label {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.guest-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--olive);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(135, 149, 107, 0.1);
+  border-radius: 10px;
+}
+
+.guest-question {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-family: 'Lora', serif;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.confirm-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+}
+
+.confirm-button.yes {
+  background: var(--olive);
+  color: white;
+}
+
+.confirm-button.yes:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.confirm-button.no {
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--beige);
+}
+
+.confirm-button.no:hover {
+  background: var(--beige);
+  color: var(--olive);
+}
+
+.guest-name-display {
+  background: rgba(135, 149, 107, 0.15);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--olive);
+  font-family: 'Playfair Display', serif;
+  text-align: center;
 }
 </style>

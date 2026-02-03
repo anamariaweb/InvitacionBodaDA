@@ -239,25 +239,24 @@ onUnmounted(() => {
 }
 
 .play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  border: 4px solid white;
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  font-size: 2.5rem;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 6px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border: 4px solid white !important;
+  border-radius: 50% !important;
+  width: 90px !important;
+  height: 90px !important;
+  font-size: 2.5rem !important;
+  color: white !important;
+  cursor: pointer !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 6px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
 }
 
 .play-button:hover,

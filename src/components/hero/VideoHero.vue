@@ -243,20 +243,21 @@ onUnmounted(() => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: 3px solid white;
+  background: rgba(0, 0, 0, 0.6);
+  border: 4px solid white;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  font-size: 3rem;
+  width: 90px;
+  height: 90px;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
-  z-index: 100;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 8px;
+  padding-left: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .play-button:hover,

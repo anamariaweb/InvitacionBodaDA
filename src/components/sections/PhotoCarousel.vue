@@ -29,7 +29,8 @@ onMounted(() => {
 
   // Esperar al siguiente tick y obtener el elemento DOM del componente
   setTimeout(() => {
-    const el = carouselRef.value?.$el || carouselRef.value
+    const ref = carouselRef.value as any
+    const el = ref?.$el || ref
     if (el && observer) {
       observer.observe(el)
     }

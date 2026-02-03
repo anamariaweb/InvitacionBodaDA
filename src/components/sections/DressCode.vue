@@ -143,6 +143,6 @@ import OptimizedImage from '../ui/OptimizedImage.vue'
   padding: 2rem;
   border-radius: 15px;
   border-left: 5px solid var(--olive);
-  text-align: left;
+  text-align: center;
 }
 </style>

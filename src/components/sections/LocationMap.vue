@@ -22,8 +22,7 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
               Portal 80: 4:00 PM</p>
             </div>
             <p class="transport-note">
-              <em>Cupos: 20-25 personas por bus (sujeto a disponibilidad)<br>
-              ⚠️ Parqueadero limitado - Indica en el formulario si necesitas transporte</em>
+              <em>⚠️ Parqueadero limitado - Indica en el formulario si necesitas transporte</em>
             </p>
           </div>
         </div>

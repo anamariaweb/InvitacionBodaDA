@@ -220,13 +220,13 @@ Ana & Deimar 💚
 
 ---
 
-## 10. Harold y Angela - HA10
+## 10. Harold y Angélica - HA10
 - [ ] Enviado
 
 ```
 🌿 ¡Llegó el momento! 🌿
 
-Harold y Angela, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+Harold y Angélica, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
 
 Y no podíamos vivirlo sin ustedes 🥳
 
@@ -1188,7 +1188,7 @@ Ana & Deimar 💚
 | 7 | Ana Sosa | AS07 | [ ] |
 | 8 | Leisa, Edilberto y Cesar | LEC08 | [ ] |
 | 9 | Vanesa y Cesar | VC09 | [ ] |
-| 10 | Harold y Angela | HA10 | [ ] |
+| 10 | Harold y Angélica | HA10 | [ ] |
 | 11 | Valentina y Manuel | VM11 | [ ] |
 | 12 | Nury y familia | NF12 | [ ] |
 | 13 | Alba y Esneider | AE13 | [ ] |

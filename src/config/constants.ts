@@ -41,7 +41,7 @@ export const GUEST_CODES: Record<string, string> = {
   'AS07': 'Ana Sosa',
   'LEC08': 'Leisa, Edilberto y Cesar',
   'VC09': 'Vanesa y Cesar',
-  'HA10': 'Harold y Angela',
+  'HA10': 'Harold y Angélica',
   'VM11': 'Valentina y Manuel',
   'NF12': 'Nury y familia',
   'AE13': 'Alba y Esneider',

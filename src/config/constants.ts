@@ -80,6 +80,7 @@ export const GUEST_CODES: Record<string, string> = {
   'KZ46': 'Karolaint Zarate',
   'JR47': 'Javier y Rocio',
   'JR48': 'Jose Ramos',
+  'MA49': 'Mariela y Alexander',
   'AD50': 'Novios - Ana y Deimar',
 }
 

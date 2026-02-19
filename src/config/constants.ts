@@ -81,6 +81,7 @@ export const GUEST_CODES: Record<string, string> = {
   'JR47': 'Javier y Rocio',
   'JR48': 'Jose Ramos',
   'MA49': 'Mariela y Alexander',
+  'DB51': 'Denisse y Brayan',
   'AD50': 'Novios - Ana y Deimar',
 }
 

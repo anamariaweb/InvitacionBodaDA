@@ -1176,7 +1176,27 @@ Los esperamos 🌿✨
 
 ---
 
-## 50. Novios - Ana y Deimar - AD50
+## 51. Denisse y Brayan - DB51
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Denisse y Brayan, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ustedes 🥳
+
+👇 Entren aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Su código de invitación es: DB51
+
+Los esperamos 🌿✨
+```
+
+---
+
+## 52. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1248,4 +1268,5 @@ Ana & Deimar 💚
 | 47 | Javier y Rocio | JR47 | [ ] |
 | 48 | Jose Ramos | JR48 | [ ] |
 | 49 | Mariela y Alexander | MA49 | [ ] |
-| 50 | Novios - Ana y Deimar | AD50 | [ ] |
+| 51 | Denisse y Brayan | DB51 | [ ] |
+| 52 | Novios - Ana y Deimar | AD50 | [ ] |

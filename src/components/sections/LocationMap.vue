@@ -8,8 +8,8 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
       <h2 class="section-title">Ubicación</h2>
       <div class="location-content">
         <div class="location-info">
-          <h3>📍 Salón de Eventos Mirador de la Sabana</h3>
-          <p>Vereda el Abra, sector el chonito<br>Finca Las Saludes<br>Cota, Cundinamarca</p>
+          <h3>📍 Sabana de Occidente</h3>
+          <p>Cota, Cundinamarca<br><em>Confirmaremos la ubicación exacta próximamente</em></p>
 
           <div class="transport-section">
             <h4>🚐 Transporte</h4>
@@ -28,7 +28,7 @@ import SectionWrapper from '../ui/SectionWrapper.vue'
         </div>
         <div class="map-container">
           <iframe
-            src="https://maps.google.com/maps?q=4.802154076107786,-74.11943418499251&z=16&output=embed"
+            src="https://maps.google.com/maps?q=4.81028,-74.10227&z=15&output=embed"
             allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

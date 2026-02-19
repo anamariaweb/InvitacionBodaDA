@@ -65,7 +65,7 @@ export const GUEST_CODES: Record<string, string> = {
   'MG31': 'Maria Paula y Gus',
   'SC32': 'Samuel Castro',
   'CR33': 'Cristian',
-  'LC34': 'Lorena y Camilo',
+  'LC34': 'Lorena y Danny',
   'ES35': 'Edgar y Sandra',
   'FJ36': 'Fidela y Jorge',
   'DS37': 'Diego y Sandra',

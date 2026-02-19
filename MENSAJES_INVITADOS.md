@@ -796,13 +796,13 @@ Ana & Deimar 💚
 
 ---
 
-## 34. Lorena y Camilo - LC34
+## 34. Lorena y Danny - LC34
 - [ ] Enviado
 
 ```
 🌿 ¡Llegó el momento! 🌿
 
-Lorena y Camilo, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+Lorena y Danny, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
 
 Y no podíamos vivirlo sin ustedes 🥳
 
@@ -1252,7 +1252,7 @@ Ana & Deimar 💚
 | 31 | Maria Paula y Gus | MG31 | [ ] |
 | 32 | Samuel Castro | SC32 | [ ] |
 | 33 | Cristian | CR33 | [ ] |
-| 34 | Lorena y Camilo | LC34 | [ ] |
+| 34 | Lorena y Danny | LC34 | [ ] |
 | 35 | Edgar y Sandra | ES35 | [ ] |
 | 36 | Fidela y Jorge | FJ36 | [ ] |
 | 37 | Diego y Sandra | DS37 | [ ] |

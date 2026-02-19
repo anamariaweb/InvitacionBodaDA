@@ -1156,7 +1156,27 @@ Ana & Deimar 💚
 
 ---
 
-## 49. Novios - Ana y Deimar - AD50
+## 49. Mariela y Alexander - MA49
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Mariela y Alexander, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ustedes 🥳
+
+👇 Entren aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Su código de invitación es: MA49
+
+Los esperamos 🌿✨
+```
+
+---
+
+## 50. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1227,4 +1247,5 @@ Ana & Deimar 💚
 | 46 | Karolaint Zarate | KZ46 | [ ] |
 | 47 | Javier y Rocio | JR47 | [ ] |
 | 48 | Jose Ramos | JR48 | [ ] |
-| 49 | Novios - Ana y Deimar | AD50 | [ ] |
+| 49 | Mariela y Alexander | MA49 | [ ] |
+| 50 | Novios - Ana y Deimar | AD50 | [ ] |

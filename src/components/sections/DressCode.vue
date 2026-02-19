@@ -27,7 +27,7 @@ import OptimizedImage from '../ui/OptimizedImage.vue'
 
         <div class="color-restrictions">
           <p><strong>⚠️ Colores Reservados:</strong><br>
-          Blanco (novia), Verde Oliva (damas de honor), Azul (novio) y Rojo (mujeres)</p>
+          Blanco (novia), Verde Oliva (damas de honor), Azul (novio) y Rojo (madrina)</p>
         </div>
 
         <div class="dresscode-tip">

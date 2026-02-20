@@ -1196,7 +1196,47 @@ Los esperamos 🌿✨
 
 ---
 
-## 52. Novios - Ana y Deimar - AD50
+## 52. Laura Orejuela - LO52
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Laura, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: LO52
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 53. Jeison Peña - JP53
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Jeison, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: JP53
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 54. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1269,4 +1309,6 @@ Ana & Deimar 💚
 | 48 | Jose Ramos | JR48 | [ ] |
 | 49 | Mariela y Alexander | MA49 | [ ] |
 | 51 | Denisse y Brayan | DB51 | [ ] |
-| 52 | Novios - Ana y Deimar | AD50 | [ ] |
+| 52 | Laura Orejuela | LO52 | [ ] |
+| 53 | Jeison Peña | JP53 | [ ] |
+| 54 | Novios - Ana y Deimar | AD50 | [ ] |

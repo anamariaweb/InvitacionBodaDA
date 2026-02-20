@@ -1236,7 +1236,27 @@ Te esperamos 🌿✨
 
 ---
 
-## 54. Novios - Ana y Deimar - AD50
+## 54. Litzi Colmenares - LC54
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Litzi, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: LC54
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 55. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1311,4 +1331,5 @@ Ana & Deimar 💚
 | 51 | Denisse y Brayan | DB51 | [ ] |
 | 52 | Laura Orejuela | LO52 | [ ] |
 | 53 | Jeison Peña | JP53 | [ ] |
-| 54 | Novios - Ana y Deimar | AD50 | [ ] |
+| 54 | Litzi Colmenares | LC54 | [ ] |
+| 55 | Novios - Ana y Deimar | AD50 | [ ] |

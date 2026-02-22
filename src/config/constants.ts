@@ -87,6 +87,8 @@ export const GUEST_CODES: Record<string, string> = {
   'LC54': 'Litzi Colmenares',
   'YC55': 'Yaneth Castro',
   'NH56': 'Nubia y Hernán',
+  'LU57': 'Luisa',
+  'YE58': 'Yeimi',
   'AD50': 'Novios - Ana y Deimar',
 }
 

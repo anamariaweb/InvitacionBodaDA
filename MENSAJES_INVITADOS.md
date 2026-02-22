@@ -1296,7 +1296,47 @@ Los esperamos 🌿✨
 
 ---
 
-## 57. Novios - Ana y Deimar - AD50
+## 57. Luisa - LU57
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Luisa, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: LU57
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 58. Yeimi - YE58
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Yeimi, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: YE58
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 59. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1374,4 +1414,6 @@ Ana & Deimar 💚
 | 54 | Litzi Colmenares | LC54 | [ ] |
 | 55 | Yaneth Castro | YC55 | [ ] |
 | 56 | Nubia y Hernán | NH56 | [ ] |
-| 57 | Novios - Ana y Deimar | AD50 | [ ] |
+| 57 | Luisa | LU57 | [ ] |
+| 58 | Yeimi | YE58 | [ ] |
+| 59 | Novios - Ana y Deimar | AD50 | [ ] |

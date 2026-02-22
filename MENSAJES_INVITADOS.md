@@ -1256,7 +1256,47 @@ Te esperamos 🌿✨
 
 ---
 
-## 55. Novios - Ana y Deimar - AD50
+## 55. Yaneth Castro - YC55
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Yaneth, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: YC55
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 56. Nubia y Hernán - NH56
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Nubia y Hernán, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ustedes 🥳
+
+👇 Entren aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Su código de invitación es: NH56
+
+Los esperamos 🌿✨
+```
+
+---
+
+## 57. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1332,4 +1372,6 @@ Ana & Deimar 💚
 | 52 | Laura Orejuela | LO52 | [ ] |
 | 53 | Jeison Peña | JP53 | [ ] |
 | 54 | Litzi Colmenares | LC54 | [ ] |
-| 55 | Novios - Ana y Deimar | AD50 | [ ] |
+| 55 | Yaneth Castro | YC55 | [ ] |
+| 56 | Nubia y Hernán | NH56 | [ ] |
+| 57 | Novios - Ana y Deimar | AD50 | [ ] |

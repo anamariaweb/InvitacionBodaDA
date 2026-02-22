@@ -268,13 +268,13 @@ Ana & Deimar 💚
 
 ---
 
-## 12. Nury y familia - NF12
+## 12. Nury y Jesus - NF12
 - [ ] Enviado
 
 ```
 🌿 ¡Llegó el momento! 🌿
 
-Nury y familia, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+Nury y Jesus, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
 
 Y no podíamos vivirlo sin ustedes 🥳
 
@@ -484,13 +484,13 @@ Ana & Deimar 💚
 
 ---
 
-## 21. Waldo y Claudia - WC21
+## 21. Walter y Claudia - WC21
 - [ ] Enviado
 
 ```
 🌿 ¡Llegó el momento! 🌿
 
-Waldo y Claudia, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+Walter y Claudia, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
 
 Y no podíamos vivirlo sin ustedes 🥳
 
@@ -1330,7 +1330,7 @@ Ana & Deimar 💚
 | 9 | Vanesa y Cesar | VC09 | [ ] |
 | 10 | Harold y Angélica | HA10 | [ ] |
 | 11 | Valentina y Manuel | VM11 | [ ] |
-| 12 | Nury y familia | NF12 | [ ] |
+| 12 | Nury y Jesus | NF12 | [ ] |
 | 13 | Alba y Esneider | AE13 | [ ] |
 | 14 | Angie y Santi | AS14 | [ ] |
 | 15 | Dorania y Mauricio | DM15 | [ ] |
@@ -1339,7 +1339,7 @@ Ana & Deimar 💚
 | 18 | Nancy y Angel | NA18 | [ ] |
 | 19 | Jaime y Mery | JM19 | [ ] |
 | 20 | Carlos y Angie | CA20 | [ ] |
-| 21 | Waldo y Claudia | WC21 | [ ] |
+| 21 | Walter y Claudia | WC21 | [ ] |
 | 22 | Cleisman y Valentina | CLV22 | [ ] |
 | 23 | Andres y Ana | AA23 | [ ] |
 | 24 | Anderson y Tatiana | AT24 | [ ] |

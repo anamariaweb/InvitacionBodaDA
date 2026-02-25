@@ -69,7 +69,6 @@ export const GUEST_CODES: Record<string, string> = {
   'ES35': 'Edgar y Sandra',
   'FJ36': 'Fidela y Jorge',
   'DS37': 'Diego y Sandra',
-  'ESS38': 'Enrique, Samuel y Sofia',
   'EO39': 'Eli y Osvaldo',
   'YJ40': 'Yudi y Jorge',
   'LA41': 'Lined y Aleja',
@@ -89,6 +88,9 @@ export const GUEST_CODES: Record<string, string> = {
   'NH56': 'Nubia y Hernán',
   'LU57': 'Luisa',
   'YE58': 'Yeimi',
+  'ET59': 'Enrique Triana',
+  'JE60': 'Jhon Triana y Ericka',
+  'JC61': 'Jairo y Cecilia',
   'AD50': 'Novios - Ana y Deimar',
 }
 

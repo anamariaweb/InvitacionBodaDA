@@ -892,30 +892,6 @@ Ana & Deimar 💚
 
 ---
 
-## 38. Enrique, Samuel y Sofia - ESS38
-- [ ] Enviado
-
-```
-🌿 ¡Llegó el momento! 🌿
-
-Enrique, Samuel y Sofia, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
-
-Y no podíamos vivirlo sin ustedes 🥳
-
-👇 Entren aquí para ver todos los detalles:
-www.bodadeimaryana.com
-
-🔐 Su código secreto: ESS38
-(Guárdenlo, lo necesitarán 😉)
-
-¡Los esperamos!
-
-Con amor,
-Ana & Deimar 💚
-```
-
----
-
 ## 39. Eli y Osvaldo - EO39
 - [ ] Enviado
 
@@ -1336,7 +1312,67 @@ Te esperamos 🌿✨
 
 ---
 
-## 59. Novios - Ana y Deimar - AD50
+## 59. Enrique Triana - ET59
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Enrique, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: ET59
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 60. Jhon Triana y Ericka - JE60
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Jhon y Ericka, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ustedes 🥳
+
+👇 Entren aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Su código de invitación es: JE60
+
+Los esperamos 🌿✨
+```
+
+---
+
+## 61. Jairo y Cecilia - JC61
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Jairo y Cecilia, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ustedes 🥳
+
+👇 Entren aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Su código de invitación es: JC61
+
+Los esperamos 🌿✨
+```
+
+---
+
+## 62. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1396,7 +1432,6 @@ Ana & Deimar 💚
 | 35 | Edgar y Sandra | ES35 | [ ] |
 | 36 | Fidela y Jorge | FJ36 | [ ] |
 | 37 | Diego y Sandra | DS37 | [ ] |
-| 38 | Enrique, Samuel y Sofia | ESS38 | [ ] |
 | 39 | Eli y Osvaldo | EO39 | [ ] |
 | 40 | Yudi y Jorge | YJ40 | [ ] |
 | 41 | Lined y Aleja | LA41 | [ ] |
@@ -1416,4 +1451,7 @@ Ana & Deimar 💚
 | 56 | Nubia y Hernán | NH56 | [ ] |
 | 57 | Luisa | LU57 | [ ] |
 | 58 | Yeimi | YE58 | [ ] |
-| 59 | Novios - Ana y Deimar | AD50 | [ ] |
+| 59 | Enrique Triana | ET59 | [ ] |
+| 60 | Jhon Triana y Ericka | JE60 | [ ] |
+| 61 | Jairo y Cecilia | JC61 | [ ] |
+| 62 | Novios - Ana y Deimar | AD50 | [ ] |

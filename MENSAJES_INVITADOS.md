@@ -1371,7 +1371,47 @@ Los esperamos 🌿✨
 
 ---
 
-## 62. Novios - Ana y Deimar - AD50
+## 62. Edward Castro - EC62
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Edward, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: EC62
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 63. Santiago Hernandez - SH63
+- [ ] Enviado
+
+```
+🌿 ¡Llegó el momento! 🌿
+
+Santiago, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+
+Y no podíamos vivirlo sin ti 🥳
+
+👇 Entra aquí para ver todos los detalles:
+www.bodadeimaryana.com
+
+Tu código de invitación es: SH63
+
+Te esperamos 🌿✨
+```
+
+---
+
+## 64. Novios - Ana y Deimar - AD50
 - [ ] Enviado (para pruebas)
 
 ```
@@ -1453,4 +1493,6 @@ Ana & Deimar 💚
 | 59 | Enrique Triana | ET59 | [ ] |
 | 60 | Jhon Triana y Ericka | JE60 | [ ] |
 | 61 | Jairo y Cecilia | JC61 | [ ] |
-| 62 | Novios - Ana y Deimar | AD50 | [ ] |
+| 62 | Edward Castro | EC62 | [ ] |
+| 63 | Santiago Hernandez | SH63 | [ ] |
+| 64 | Novios - Ana y Deimar | AD50 | [ ] |

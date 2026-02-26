@@ -724,23 +724,22 @@ Ana & Deimar 💚
 
 ---
 
-## 31. Maria Paula y Gus - MG31
+## 31. Maria Paula - MG31
 - [ ] Enviado
 
 ```
 🌿 ¡Llegó el momento! 🌿
 
-Maria Paula y Gus, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
+Maria Paula, lo que tanto esperábamos ya es una realidad... ¡Nos casamos! 💍
 
-Y no podíamos vivirlo sin ustedes 🥳
+Y no podíamos vivirlo sin ti 🥳
 
-👇 Entren aquí para ver todos los detalles:
+👇 Entra aquí para ver todos los detalles:
 www.bodadeimaryana.com
 
-🔐 Su código secreto: MG31
-(Guárdenlo, lo necesitarán 😉)
+Tu código de invitación es: MG31
 
-¡Los esperamos!
+Te esperamos 🌿✨
 
 Con amor,
 Ana & Deimar 💚
@@ -1425,7 +1424,7 @@ Ana & Deimar 💚
 | 28 | Gonzalo y Beatriz | GB28 | [ ] |
 | 29 | Hernan Castro | HC29 | [ ] |
 | 30 | Mario Castro | MC30 | [ ] |
-| 31 | Maria Paula y Gus | MG31 | [ ] |
+| 31 | Maria Paula | MG31 | [ ] |
 | 32 | Samuel Castro | SC32 | [ ] |
 | 33 | Cristian | CR33 | [ ] |
 | 34 | Lorena y Danny | LC34 | [ ] |

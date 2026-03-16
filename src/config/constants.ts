@@ -93,6 +93,7 @@ export const GUEST_CODES: Record<string, string> = {
   'JC61': 'Jairo y Cecilia',
   'EC62': 'Edward Castro',
   'SH63': 'Santiago Hernandez',
+  'AY64': 'Alejandra Y Esposo',
   'AD50': 'Novios - Ana y Deimar',
 }
 
